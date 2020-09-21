@@ -10,8 +10,9 @@ package erstehue.ErsteHue;
  * @author elias
  */
 interface PrimeSieve {
-    
+  
 public boolean isPrime(int p);
 public void printPrimes();
+
 
 }
