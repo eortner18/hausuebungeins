@@ -5,6 +5,8 @@
  */
 package erstehue.ErsteHue;
 
+import java.util.Scanner;
+
 /**
  *
  * @author elias
@@ -15,7 +17,13 @@ public class main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+       Scanner sc = new Scanner(System.in, "Windows-1252");
+        System.out.println("wie viele Zahlen möchten sie ausgeben?");
+        int z;
+        z = sc.nextInt();
+        
+        EratosthenesPrimeSieve EpS = new EratosthenesPrimeSieve(z);
+        //nur zum Test da :D
     }
     
 }
