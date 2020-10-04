@@ -18,12 +18,14 @@ public class main {
      */
     public static void main(String[] args) {
        Scanner sc = new Scanner(System.in, "Windows-1252");
-        System.out.println("wie viele Zahlen möchten sie ausgeben?");
+        System.out.println("bis wohin möchen Sie Zahlen ausgeben?");
         int z;
         z = sc.nextInt();
         
         EratosthenesPrimeSieve EpS = new EratosthenesPrimeSieve(z);
-        //nur zum Test da :D
+        EpS.printPrimes();
+            //nur zum Test da :D
+
     }
     
 }

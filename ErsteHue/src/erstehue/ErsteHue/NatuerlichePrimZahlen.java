@@ -22,7 +22,7 @@ public class NatuerlichePrimZahlen {
     {
         ArrayList<Integer> geradeZahlen =new ArrayList<>();
         EratosthenesPrimeSieve eps = new EratosthenesPrimeSieve(ober);
-       
+       // hier werden alle zahlen bis zur obergrenze durch 2 geteilt -> gerade zahlen aussortiert, da zwei eine prim ist fängt for bei drei an
         for (int i = 3; i <= ober; i++) {
             if(i % 2 == 0 )
             {
@@ -33,7 +33,8 @@ public class NatuerlichePrimZahlen {
         
         for (int i = 0; i < geradeZahlen .size(); i++) {
         for (int j = 0; j < geradeZahlen .get(i); j++) {
-             if(eps.isPrime(j)==true)
+            
+            if(eps.isPrime(j)==true)
                 {
                     for (int z = 0; z < geradeZahlen.get(i); z++) {
                         if(eps.isPrime(z)==true)
