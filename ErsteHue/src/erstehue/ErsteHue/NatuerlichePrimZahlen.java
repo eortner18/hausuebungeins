@@ -21,7 +21,7 @@ public class NatuerlichePrimZahlen {
     public void numbersWithPrime()
     {
         ArrayList<Integer> geradeZahlen =new ArrayList<>();
-        EratosthenesPrimeSieve eps = new EratosthenesPrimeSieve();
+        EratosthenesPrimeSieve eps = new EratosthenesPrimeSieve(ober);
        
         for (int i = 3; i <= ober; i++) {
             if(i % 2 == 0 )
@@ -58,7 +58,8 @@ public class NatuerlichePrimZahlen {
                     }
                 }
                     else
-                    {               
+                    { 
+                      //falls es keine PrimZahl ist weg damit  
                     }
             }
         }
