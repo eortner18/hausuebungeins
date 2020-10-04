@@ -5,6 +5,8 @@
  */
 package erstehue.ErsteHue;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author elias
@@ -17,13 +19,47 @@ public class EratosthenesPrimeSieve implements PrimeSieve{
     }
     
     @Override
-    public boolean isPrime(int p) {
-        for()
+    public boolean isPrime(int zahl) {
+      
+        ArrayList<Boolean> arr = new ArrayList<>();
+        
+        if(zahl <  2)
+        {
+            return false;
+        }
+        
+        for(int i = 0; i <= zahl ; i++)
+        {
+            arr.add(i, true);
+        }
+        
+        for (int i = 2; i <= zahl ; i++) {
+            if(arr.get(i) == true || arr.get(i).equals(true))
+            {
+                int j = i;
+                do
+                {
+                    j = j + i;
+                    if(j <= zahl)
+                    {
+                        arr.set(j, false);
+                    }
+                }while(j <= zahl);
+            }
+        }
+        return arr.get(zahl--);
     }
 
-    @Override
+ @Override
     public void printPrimes() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
+        System.out.println("Primzahlen: ");
+        
+        
+        for(int i = 0; i <= this.ober; i++)
+        { if(isPrime(i) == true && i > 1)
+            {
+                System.out.print(i + ",");
+            }
+        }
+    } 
 }
